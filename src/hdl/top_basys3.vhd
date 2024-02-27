@@ -94,7 +94,11 @@ begin
 
 	--	Port map: wire your component up to the switches and seven-segment display cathodes
 	-----------------------------------------------------	
-	
+	sevenSegDecoder_init   :   sevenSegDecoder
+	port map (
+	   i_D => sw,
+       o_S => seg
+          );
 	
 	-- CONCURRENT STATEMENTS ----------------------------
 	w_7SD_EN_n  <= not btnC;
